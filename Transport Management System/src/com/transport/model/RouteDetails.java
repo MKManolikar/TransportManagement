@@ -9,6 +9,9 @@ public class RouteDetails {
 		this.routeNo = routeNo;
 		this.locId = locId;
 	}
+	public RouteDetails() {
+		// TODO Auto-generated constructor stub
+	}
 	public int getRouteNo() {
 		return routeNo;
 	}

@@ -10,6 +10,9 @@ public class CabDetails {
 		this.cabId = cabId;
 		this.cabNo = cabNo;
 	}
+	public CabDetails() {
+		// TODO Auto-generated constructor stub
+	}
 	public int getCabId() {
 		return cabId;
 	}

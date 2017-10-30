@@ -5,9 +5,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/Admin.css">
 </head>
 <body>
-Welcome Commuter...!!!
+<div class="dropdown">
+  <button class="dropbtn">My Profile</button>
+  <div class="dropdown-content">
+    <a href="#">change password</a>
+    <a href="#">Logout </a>
+  </div>
+</div>
 
 </body>
 </html>
