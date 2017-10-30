@@ -1,0 +1,7 @@
+2017-10-09 : 11:22:22 INFO com.dairyplant.db.DBConnection:51-Connection established null
+2017-10-09 : 11:33:26 INFO com.factory.db.DBConnection:51-Connection established com.mysql.jdbc.JDBC4Connection@774085
+2017-10-09 : 11:33:26 INFO com.factory.dao.Demo:11-Material [materialId=0, materialName=null, price=0.0, category=null]
+2017-10-13 : 16:39:30 INFO com.factory.db.DBConnection:51-Connection established com.mysql.jdbc.JDBC4Connection@774085
+2017-10-13 : 16:39:33 INFO com.factory.dao.Demo:15-Material [materialId=0, materialName=null, price=0.0, category=null]
+2017-10-17 : 16:09:25 INFO com.factory.db.DBConnection:51-Connection established com.mysql.jdbc.JDBC4Connection@956de9
+2017-10-17 : 16:09:41 INFO com.factory.db.DBConnection:51-Connection established com.mysql.jdbc.JDBC4Connection@956de9

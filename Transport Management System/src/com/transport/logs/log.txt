@@ -1,0 +1,6 @@
+2017-10-26 : 15:17:42 INFO com.transport.dao.DemoDao:27-Amar
+2017-10-26 : 15:28:59 INFO com.transport.db.DBConnection:46-driverloaded
+2017-10-26 : 15:29:00 INFO com.transport.db.DBConnection:51-Connection established ConnectionID:1
+2017-10-26 : 15:29:00 INFO com.transport.dao.DemoDao:23-ConnectionID:1Connected
+2017-10-26 : 15:29:01 INFO com.transport.dao.DemoDao:25-Mitali                                       
+2017-10-26 : 15:29:01 INFO com.transport.dao.DemoDao:27-Driver [driverId=101, driverName=Amar, driverContact=98604567]
