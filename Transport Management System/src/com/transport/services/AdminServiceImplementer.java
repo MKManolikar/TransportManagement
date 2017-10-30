@@ -53,12 +53,13 @@ public class AdminServiceImplementer implements AdminServices {
 		
 	
 
-	public Commuter deleteCommuter(int cId) {
+	public int deleteCommuter(int cId) {
 		// TODO Auto-generated method stub
 		
 		try {
 			try {
 				CommuterDao.deleteCommuter(cId);
+				return 1;
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -67,7 +68,7 @@ public class AdminServiceImplementer implements AdminServices {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		return 0;
 	
 	}
 
@@ -120,7 +121,8 @@ public class AdminServiceImplementer implements AdminServices {
 	public Driver getDriver(int driverId) throws SQLException, IOException {
 		// TODO Auto-generated method stub
 		Driver newdr= null;
-		newdr=DriverDao.getDriver(driverId);
+		DriverDao dDao= new DriverDao();
+		newdr=dDao.getDriver(driverId);
 		return newdr;
 	}
 

@@ -12,8 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-import com.mysql.jdbc.interceptors.SessionAssociationInterceptor;
-import com.transport.dao.DemoDao;
 import com.transport.dao.UserDao;
 import com.transport.model.User;
 

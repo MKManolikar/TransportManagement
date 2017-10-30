@@ -211,14 +211,14 @@ public class CabDetailsDao {
 	 * 
 	 *
 	 */
-	public static CabDetails getCabDetails(int cId,int locId) throws IOException {
+	public static CabDetails commuterCabDetails(int cId) {
 		CabDetails cabDetails = null;
 		//System.out.println("get Cab Details");
 
 		try {
 			conn = DBConnection.getConnection();
-			PreparedStatement pps = conn.prepareStatement(getOneQuery);
-			pps.setInt(1, no);
+			PreparedStatement pps = conn.prepareStatement(getCommuterQuery);
+			pps.setInt(1, cId);
 
 			ResultSet resultSet = pps.executeQuery();
 			while (resultSet.next()) {

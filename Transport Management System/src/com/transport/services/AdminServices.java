@@ -29,6 +29,8 @@ public interface AdminServices {
 	public Integer getDriverDetails(int Id);
 	
 	public Driver deleteDriverDetails();
+
+	public Integer addDriver(Driver driver);
 	
 }
 

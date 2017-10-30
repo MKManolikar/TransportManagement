@@ -22,10 +22,10 @@ public class LocationDao {
 	
 	private static Connection conn = null;
 
-	private static String addQuery="insert into location values(?,?,?)";
-	private static String deleteQuery="delete from location where loc_id=?";
-	private static String getOneQuery="select * from location where loc_id=?";
-	private static String getAllQuery="select * from location";
+	private static String addQuery="insert into [Transport].[dbo].[Location] values(?,?,?)";
+	private static String deleteQuery="delete from [Transport].[dbo].[Location] where loc_id=?";
+	private static String getOneQuery="select * from [Transport].[dbo].[Location] where loc_id=?";
+	private static String getAllQuery="select * from [Transport].[dbo].[Location]";
 	
 	private static DBConnection DBConnection;
 

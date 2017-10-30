@@ -3,6 +3,7 @@ package com.transport.services;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import com.transport.model.Cab;
 import com.transport.model.Commuter;
 /**
  * 
@@ -13,7 +14,7 @@ import com.transport.model.Commuter;
 public interface CommuterService {
 
 	
-	public Commuter myCabDetails(int cId) throws IOException, SQLException;
+	public Cab myCabDetails(int cId) throws IOException, SQLException;
 
 	public void viewCabmates(int cId);
 

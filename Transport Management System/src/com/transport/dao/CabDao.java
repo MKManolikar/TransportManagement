@@ -11,16 +11,20 @@ import java.util.List;
 
 import com.transport.db.DBConnection;
 import com.transport.model.Cab;
-
+/**
+ * 
+ * @author User
+ *
+ */
 public class CabDao {
 
 	private static Connection conn = null;
 
-	private static String addQuery = "insert into cab values(?,?,?)";      //Add
-	private static String deleteQuery = "delete from cab where cab_no=?";
-	private static String getOneQuery = "select * from cab where cab_no=?";
-	private static String getAllQuery = "select * from cab";
-	private static String updateQuery = "update cab set driver_id=?, route_no=? where cab_no=?";
+	private static String addQuery = "insert into [Transport].[dbo].[Cab] values(?,?,?)";      //Add Query
+	private static String deleteQuery = "delete from [Transport].[dbo].[Cab] where cab_no=?";
+	private static String getOneQuery = "select * from [Transport].[dbo].[Cab] where cab_no=?";
+	private static String getAllQuery = "select * from [Transport].[dbo].[Cab]";
+	private static String updateQuery = "update [Transport].[dbo].[Cab] set driver_id=?, route_no=? where cab_no=?";
 
 	private static DBConnection DBConnection;
 

@@ -4,11 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Welcome Commuter</title>
-<link rel="stylesheet" href="css/Admin.css">
+<title></title>
 </head>
 <body>
-<jsp:include page="CommuterHeader.jsp"></jsp:include>
-
-</body>
+<p align="center">Copyright@2017 - Mahesh Manolikar</p></body>
 </html>

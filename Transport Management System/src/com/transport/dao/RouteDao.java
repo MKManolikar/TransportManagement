@@ -16,11 +16,11 @@ public class RouteDao {
 
 	private static Connection conn = null;
 
-	private static String addQuery = "insert into route values(?,?)";
-	private static String deleteQuery = "delete from route where route_no=?";
-	private static String getOneQuery = "select * from route where route_no=?";
-	private static String getAllQuery = "select * from route";
-	private static String updateQuery = "update route set route_name=? where route_no=?";
+	private static String addQuery = "insert into [Transport].[dbo].[Route] values(?,?)";
+	private static String deleteQuery = "delete from [Transport].[dbo].[Route] where route_no=?";
+	private static String getOneQuery = "select * from [Transport].[dbo].[Route] where route_no=?";
+	private static String getAllQuery = "select * from [Transport].[dbo].[Route]";
+	private static String updateQuery = "update [Transport].[dbo].[Route] set route_name=? where route_no=?";
 
 	private static DBConnection DBConnection;
 
