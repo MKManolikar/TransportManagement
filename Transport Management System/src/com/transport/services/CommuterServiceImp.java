@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.transport.dao.CabDao;
+import com.transport.dao.CabDetailsDao;
 import com.transport.dao.CommuterDao;
 import com.transport.model.Commuter;
 
@@ -17,38 +19,14 @@ public class CommuterServiceImp implements CommuterService
 
 {
 
+	
 	@Override
-	public Commuter getCommuter(int id) throws IOException, SQLException {
-
-		// TODO Auto-generated method stub
-		Commuter newcommuter = null;
-		newcommuter = CommuterDao.getCommuter(id);
-		return newcommuter;
-	}
-
-	public List<Commuter> getCommuterDetails() {
-
-		List<Commuter> newp = null;
-		try {
-			try {
-				newp = CommuterDao.getCommuterDetails();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return newp;
-	}//getCommuterDetails method
-
-	public int updateCommuter(int cLoc, int cId) throws SQLException {
+	public int updatePickupLocation(int cLoc, int cId) {
 		// TODO Auto-generated method stub
 
 		// Commuter newcommuter= null;
 		try {
-			cLoc = CommuterDao.updateCommuter(cLoc);
+			cLoc = CommuterDao.updateCommuter(cId,cLoc);
 			return 1;
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -59,15 +37,22 @@ public class CommuterServiceImp implements CommuterService
 	}
 
 	@Override
-	public void getCommuterDetails(Commuter Commuter) {
+	public Commuter myCabDetails(int cId) throws IOException, SQLException {
 		// TODO Auto-generated method stub
-
+		
+		CabDetailsDao cdDao = new CabDetailsDao();
+		
+		cdDao.getCabDetails(cId)
+		
+		
+		return null;
 	}
 
 	@Override
-	public Commuter updateCommuter(Commuter commuter) {
+	public void viewCabmates(int cId) {
 		// TODO Auto-generated method stub
-		return null;
-	}// class ends here
+		
+	}
 
+	
 }

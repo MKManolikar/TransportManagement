@@ -13,11 +13,11 @@ import com.transport.model.Commuter;
 public interface CommuterService {
 
 	
-	public Commuter getCommuter(int id) throws IOException, SQLException;
+	public Commuter myCabDetails(int cId) throws IOException, SQLException;
 
-	public void getCommuterDetails(Commuter Commuter);
+	public void viewCabmates(int cId);
 
-	public Commuter updateCommuter(Commuter commuter);
+	public int updatePickupLocation(int cId,int locId);
 
 }// interface CommuterServices
 

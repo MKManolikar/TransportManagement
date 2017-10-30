@@ -23,7 +23,8 @@ public class CommuterDao {
 	private static String getOneQuery="select * from [Transport].[dbo].[Commuter] where C_id=?";
 	private static String getAllQuery="select * from [Transport].[dbo].[Commuter]";
 	private static String updateQuery="update [Transport].[dbo].[Commuter] set C_name=?, C_loc=?, C_contact=?  where C_id=?";
-
+	private static String updateLocationQuery="update [Transport].[dbo].[Commuter] set C_loc=? where C_id=?";
+	
 	private static DBConnection DBConnection;
 	/**
 	 * 
@@ -150,11 +151,45 @@ public class CommuterDao {
 	 * 
 	 *
 	 */
-	public static int updateCommuter(int cLoc) throws IOException {
+	public static int updateCommuter(int cId,String cName,int cLoc,	int cContact) throws IOException {
 		//System.out.println(updateQuery);
 		try {
 			conn = DBConnection.getConnection();
 			PreparedStatement pps = conn.prepareStatement(updateQuery);
+			
+			pps.setInt(1,cId);
+			pps.setString(2,cName);
+			pps.setInt(3,cLoc);
+			pps.setInt(4,cContact);
+			
+
+			int rowUpdated = pps.executeUpdate();
+			System.out.println(rowUpdated);
+			if (rowUpdated == 1)
+				return 1;
+
+		}//try
+		catch (SQLException e) {
+			e.printStackTrace();
+		}//catch
+		return 0;
+	}//update commuter details
+	
+	/**
+	 * 
+	 * @author User
+	 * @param c_id,c_loc
+	 * @method updateCommuter
+	 * @return Integer
+	 * @throws IOException
+	 * 
+	 *
+	 */
+	public static int updateCommuter(int cId,int cLoc) throws IOException {
+		//System.out.println(updateQuery);
+		try {
+			conn = DBConnection.getConnection();
+			PreparedStatement pps = conn.prepareStatement(updateLocationQuery);
 			
 			pps.setInt(1,cLoc);
 

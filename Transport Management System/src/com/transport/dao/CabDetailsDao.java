@@ -23,6 +23,7 @@ public class CabDetailsDao {
 	private static String getAllQuery = "select * from [Transport].[dbo].[CabDetails] ";
 	private static String updateQuery="update [Transport].[dbo].[CabDetails] set C_id=?  where Cab_no=?";
 	private static String deleteQuery="delete from [Transport].[dbo].[CabDetails] where C_id=?";
+	private static String getCommuterQuery = "select * from [Transport].[dbo].[CabDetails] where C_id=?";
 	
 	private static DBConnection DBConnection;
 
@@ -131,7 +132,7 @@ public class CabDetailsDao {
 	 */
 	public static CabDetails getCabDetails(int no) throws IOException {
 		CabDetails cabDetails = null;
-		System.out.println("get Cab Details");
+		//System.out.println("get Cab Details");
 
 		try {
 			conn = DBConnection.getConnection();
@@ -198,5 +199,44 @@ public class CabDetailsDao {
 		}// catch
 		return list;
 	}// get all details of cabs
+	
+	
+	/**
+	 * 
+	 * @author User
+	 * @param cab_no,Cab_id
+	 * @method getCabDetails
+	 * @return cab
+	 * @throws IOException
+	 * 
+	 *
+	 */
+	public static CabDetails getCabDetails(int cId,int locId) throws IOException {
+		CabDetails cabDetails = null;
+		//System.out.println("get Cab Details");
+
+		try {
+			conn = DBConnection.getConnection();
+			PreparedStatement pps = conn.prepareStatement(getOneQuery);
+			pps.setInt(1, no);
+
+			ResultSet resultSet = pps.executeQuery();
+			while (resultSet.next()) {
+				int cabId= resultSet.getInt(1);
+				int cabNo = resultSet.getInt(2);
+				
+
+				cabDetails = new CabDetails(cabId, cabNo);
+				return cabDetails;
+			}// while
+
+		}// try
+		catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}// catch
+		return cabDetails;
+	}// get a particular details of cab by commuter Id
 
 }

@@ -16,7 +16,7 @@ public class CabDao {
 
 	private static Connection conn = null;
 
-	private static String addQuery = "insert into cab values(?,?,?)";
+	private static String addQuery = "insert into cab values(?,?,?)";      //Add
 	private static String deleteQuery = "delete from cab where cab_no=?";
 	private static String getOneQuery = "select * from cab where cab_no=?";
 	private static String getAllQuery = "select * from cab";
@@ -29,7 +29,7 @@ public class CabDao {
 	 * @author User
 	 * @param cab_no,driver_id,route_no
 	 * @method addNewCabDetails
-	 * @return int
+	 * @return Integer
 	 * @throws IOException
 	 * @throws SQLException
 	 * 
