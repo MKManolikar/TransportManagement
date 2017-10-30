@@ -4,10 +4,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Welcome Commuter</title>
 <link rel="stylesheet" href="css/Admin.css">
 </head>
 <body>
+
+<div class="dropdown">
+  <button class="dropbtn">Commuters</button>
+  <div class="dropdown-content">
+    <a href="#">view cab details</a>
+    <a href="#">view cabmates</a>
+    <a href="#">Update pickup location</a>
+  </div>
+</div>
 <div class="dropdown">
   <button class="dropbtn">My Profile</button>
   <div class="dropdown-content">

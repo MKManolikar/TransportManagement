@@ -150,15 +150,13 @@ public class CommuterDao {
 	 * 
 	 *
 	 */
-	public static int updateCommuter(int cId,String cName,int cLoc, int cContact) throws IOException {
+	public static int updateCommuter(int cLoc) throws IOException {
 		//System.out.println(updateQuery);
 		try {
 			conn = DBConnection.getConnection();
 			PreparedStatement pps = conn.prepareStatement(updateQuery);
 			
-			pps.setString(1, cName);
-			pps.setInt(2, cLoc);
-			pps.setInt(3, cContact);
+			pps.setInt(1,cLoc);
 
 			int rowUpdated = pps.executeUpdate();
 			System.out.println(rowUpdated);

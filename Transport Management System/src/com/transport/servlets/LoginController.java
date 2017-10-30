@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
+import com.mysql.jdbc.interceptors.SessionAssociationInterceptor;
 import com.transport.dao.DemoDao;
 import com.transport.dao.UserDao;
 import com.transport.model.User;
@@ -66,6 +67,7 @@ public class LoginController extends HttpServlet {
 				String type = user.getUserType().trim();
 				if ("admin".equals(type)) {
 					System.out.println(type);
+					
 					response.sendRedirect("Admin.jsp");
 				} else if ("commuter".equals(type)) {
 					System.out.println(type);
