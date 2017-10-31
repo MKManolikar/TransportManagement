@@ -1,5 +1,6 @@
 package com.transport.dao;
 
+import java.io.IOException;
 import java.sql.Connection;
 
 
@@ -38,6 +39,15 @@ public class UserDao {
 	private ResultSet resultSet;
 
 	// Method for adding user into table
+	/**
+	 * 
+	 * @author User
+	 * @param user
+	 * @method add
+	 * @throws SQLException
+	 * 
+	 *
+	 */
 	public void add(User user) throws SQLException {
 
 		stmt = getStatement(insertQuery);
@@ -56,6 +66,16 @@ public class UserDao {
 	}
 
 	// method for deleting student from database
+	/**
+	 * 
+	 * @author User
+	 * @param userId
+	 * @method delete
+	 * @return Integer
+	 * @throws SQLException
+	 * 
+	 *
+	 */
 	public void delete(String userId) throws SQLException {
 
 		stmt = getStatement(deleteQuery);
@@ -68,7 +88,16 @@ public class UserDao {
 			logger.debug("failed to delete user");
 	}
 
-	// method for updating a student in the database
+	// method for updating a student in the database/**
+	 /* 
+	 * @author User
+	 * @param user
+	 * @method update
+	 * @throws SQLException
+	 * 
+	 *
+	 */
+	
 	public void update(User user) throws SQLException {
 
 		User userInDB = new UserDao().getUser(user.getUserId());
@@ -93,6 +122,16 @@ public class UserDao {
 	}
 
 	// method for searching single user from the database using userId
+	/**
+	 * 
+	 * @author User
+	 * @param i
+	 * @method getUser
+	 * @return User
+	 * @throws SQLException
+	 * 
+	 *
+	 */
 	public User getUser(int i) throws SQLException {
 		stmt = getStatement(searchUserbyId);
 		stmt.setLong(1, i);
@@ -108,6 +147,16 @@ public class UserDao {
 	}
 
 	// method for searching all users in the database
+	/**
+	 * 
+	 * @author User
+	 * @method getAllUsers
+	 * @return List<User>
+	 * @throws SQLException
+	 * 
+	 *
+	 */
+	
 	public List<User> getAllUsers() throws SQLException {
 
 		stmt = getStatement(searchAllUsers);
@@ -131,6 +180,17 @@ public class UserDao {
 		return statement;
 	}
 
+	/**
+	 * 
+	 * @author User
+	 * @method getUserbyName
+	 * @param userName
+	 * @return User
+	 * @throws SQLException
+	 * 
+	 *
+	 */
+	
 	public User getUserbyName(String userName) throws SQLException {
 		// TODO Auto-generated method stub
 		stmt = getStatement(searchUserbyName);
